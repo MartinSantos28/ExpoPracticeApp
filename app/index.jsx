@@ -1,24 +1,16 @@
 import React from 'react'
-import { StatusBar, StyleSheet, Text, View } from 'react-native'
+import { StatusBar } from 'expo-status-bar'
+import {Text, View } from 'react-native'
 import { Link } from 'expo-router'
 const RootLayout = () => {
   return (
-    <View style={styles.container}>
-      <Text>AORA</Text>
+    <View className="flex-1 items-center justify-center bg-white">
+      <Text className="text-3xl font-pblack">AORA</Text>
       <StatusBar style="auto" />
-      <Link href='/profile' style={{color: 'blue'}}>Go to profile</Link>
+      <Link href='/home' style={{color: 'blue'}}>Go to home</Link>
 
     </View>
   )
 }
 
 export default RootLayout
-
-const styles = StyleSheet.create({
-    container: {
-        display : 'flex',
-        flex : 1,  
-        alignItems : 'center', 
-        justifyContent : 'center'
-    }
-})
